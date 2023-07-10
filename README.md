@@ -49,7 +49,7 @@ L'applicazione sarà accessibile all'indirizzo sopra indicato.
 Per fermare il container Docker, esegui il comando seguente:
 
 ```
-docker-compose up -d
+docker-compose down
 ```
 
 Questo comando fermerà e rimuoverà il container Docker per l'applicazione e il container MySQL.
