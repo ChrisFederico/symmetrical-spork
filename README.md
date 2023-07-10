@@ -54,6 +54,13 @@ username: root
 password: password
 ```
 
+## Tests
+
+Per lanciare i test è sufficiente digitare il comando:
+```
+php artisan test
+```
+
 ## Arresto del container
 
 Per fermare il container Docker, esegui il comando seguente:
