@@ -33,7 +33,7 @@ Questo comando avvierà il container Docker per l'applicazione Laravel e il cont
 6. Una volta che i container sono in esecuzione, esegui il seguente comando per eseguire il seeder del database:
 
 ```
-docker-compose exec app php artisan db:seed
+php artisan db:seed UsersSeeder
 ```
 
 Questo comando popolerà il database con dati di esempio utilizzando il seeder.
@@ -47,5 +47,9 @@ L'applicazione sarà accessibile all'indirizzo sopra indicato.
 ## Arresto del container
 
 Per fermare il container Docker, esegui il comando seguente:
+
+```
+docker-compose up -d
+```
 
 Questo comando fermerà e rimuoverà il container Docker per l'applicazione e il container MySQL.
