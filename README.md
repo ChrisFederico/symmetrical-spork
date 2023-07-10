@@ -1,6 +1,4 @@
-# Progetto Laravel con Docker
-
-Questo è un progetto Laravel configurato per essere eseguito utilizzando Docker. Utilizzando Docker, puoi creare un ambiente isolato per eseguire l'applicazione Laravel insieme a un container MySQL.
+# Laravel test
 
 ## Prerequisiti
 
@@ -30,19 +28,31 @@ docker-compose up -d
 
 Questo comando avvierà il container Docker per l'applicazione Laravel e il container MySQL.
 
-6. Una volta che i container sono in esecuzione, esegui il seguente comando per eseguire il seeder del database:
+6. Una volta che i container sono in esecuzione, esegui i seguenti comandi per lanciare le migrations sul progetto e il seeder per popolare le tabelle
 
 ```
+php artisan migrate
 php artisan db:seed UsersSeeder
 ```
 
-Questo comando popolerà il database con dati di esempio utilizzando il seeder.
+6.b. opzionalmente puoi lanciare una migrate:fresh per azzerare completamente i dati presenti nelle tabelle e rilanciare il seeder per un'installazione pulita:
+
+```
+php artisan migrate:fresh
+php artisan db:seed UsersSeeder
+```
+
+Questo comando popolerà il database con un utente il cui username è root e la password è password.
 
 7. Ora puoi accedere alla tua applicazione Laravel aprendo il browser e visitando:
 
-http://localhost:8000
+http://localhost:8000/login
 
-L'applicazione sarà accessibile all'indirizzo sopra indicato.
+L'applicazione sarà accessibile all'indirizzo sopra indicato. Le credenziali, come detto in precendenza, sono le seguenti:
+```
+username: root
+password: password
+```
 
 ## Arresto del container
 
